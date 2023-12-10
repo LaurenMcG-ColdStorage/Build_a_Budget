@@ -28,3 +28,7 @@ function buildTable(){
         </tr>`
     };
 }
+
+function removeMe(event){
+    event.target.parentElement.parentElement.remove();
+};
