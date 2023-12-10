@@ -11,6 +11,10 @@ function handleSubmit(event){  //Create submission handler
     });
     console.log(employeeData);  //Validate ingested data
     buildTable()
+    salaryCalc()
+    const form = document.querySelector('.addEmployee'); //Collect form location
+    form.reset();  //Clears the form
+
 };
 
 function buildTable(){
@@ -29,6 +33,24 @@ function buildTable(){
     };
 }
 
-function removeMe(event){
+function removeMe(event){      //Creats delete button functionality for rows
     event.target.parentElement.parentElement.remove();
+};
+
+function salaryCalc(){          //Creates salary calculator
+    const budget = document.querySelector('.salaryBudget');
+    const warning = document.querySelector('#newEmployeeForm');
+    let monthlySal = 0;
+    let maxSal = 20000;
+    for (let employee of employeeData){
+        monthlySal += Math.round(employee.salary/12);
+    };
+    if(monthlySal < maxSal){
+        budget.innerHTML = `<p>Total Monthly Budget: ${monthlySal}</p>`
+    } else {
+        budget.innerHTML = `<p>Total Monthly Budget: ${monthlySal}</p>`
+        warning.innerHTML += `<h3 class='warning'>Salary Over Budget!</h3>`
+    }
+    
+
 };

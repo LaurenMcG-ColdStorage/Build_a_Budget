@@ -3,6 +3,8 @@
     width: 100%;
     text-align: center;
     background-color: cadetblue;
+    border-style: solid;
+    border-color:peru;
 }
 h2{
     background-color: cadetblue;
@@ -10,7 +12,7 @@ h2{
     width: 100%;
 }
 h1{
-    background-color: burlywood;
+    background-color: antiquewhite;
     text-align: center;
 }
 .addEmployee{
@@ -18,4 +20,10 @@ h1{
 }
 #tableElement{
     background-color: antiquewhite;
+}
+.warning{
+    background-color: antiquewhite;
+    color:darkred;
+    text-align: center;
+    text-shadow: 2px 2px 2px grey;
 }
