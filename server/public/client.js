@@ -35,6 +35,7 @@ function buildTable(){
 
 function removeMe(event){      //Creats delete button functionality for rows
     event.target.parentElement.parentElement.remove();
+    salaryCalc()
 };
 
 function salaryCalc(){          //Creates salary calculator
@@ -50,7 +51,7 @@ function salaryCalc(){          //Creates salary calculator
     } else {
         budget.innerHTML = `<p>Total Monthly Budget: ${monthlySal}</p>`
         warning.innerHTML += `<h3 class='warning'>Salary Over Budget!</h3>`
-    }
+    };
     
 
 };
