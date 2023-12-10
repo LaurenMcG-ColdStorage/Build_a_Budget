@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <title>Salary Calculator</title>
+</head>
+<body>
+  <header>
+    <h1>Salary Calculator</h1>
+  </header>
+  <main>
+    <h2>Add Employee</h2>
+      <div id="newEmployeeForm">
+        <form class="addEmployee" onSubmit="handleSubmit(event)">
+          <input name="fName" type="string" placeholder="first name"/><br />
+          <input name="lName" type="string" placeholder="last name"/><br />
+          <input name="employeeID" type="number" placeholder="ex 148560"/><br />
+          <input name="jobTitle" type="string" placeholder="ex custodian"/><br />
+          <input name="salary" type="number" placeholder="000000" /><br />
+          <input type="submit" value="Add Employee" />
+        </form>
+      </div>
+    <h2>Employees</h2>
+      <table class="employeeTable">
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>ID Number</th>
+            <th>Job Title</th>
+            <th>Annual Salary</th>
+            <th>Remove</th>
+          </tr>
+        </thead>
+        <tbody id="empData">
+        
+        </tbody>
+      </table>
+  </main>
+  <footer>
+    <p>Total Monthly</p>
+  </footer>
+</body>
+</html>
