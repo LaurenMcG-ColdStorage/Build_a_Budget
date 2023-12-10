@@ -13,11 +13,11 @@
     <h2>Add Employee</h2>
       <div id="newEmployeeForm">
         <form class="addEmployee" onSubmit="handleSubmit(event)">
-          <input name="fName" type="string" placeholder="first name"/><br />
-          <input name="lName" type="string" placeholder="last name"/><br />
-          <input name="employeeID" type="number" placeholder="ex 148560"/><br />
-          <input name="jobTitle" type="string" placeholder="ex custodian"/><br />
-          <input name="salary" type="number" placeholder="000000" /><br />
+          <input id='fName' name="fName" type="string" placeholder="first name"/><br />
+          <input id='lName' name="lName" type="string" placeholder="last name"/><br />
+          <input id='empID' name="employeeID" type="number" placeholder="ex 148560"/><br />
+          <input id='jobTitle' name="jobTitle" type="string" placeholder="ex custodian"/><br />
+          <input id='salary' name="salary" type="number" placeholder="000000" /><br />
           <input type="submit" value="Add Employee" />
         </form>
       </div>
@@ -42,4 +42,5 @@
     <p>Total Monthly</p>
   </footer>
 </body>
+<script src="./client.js"></script>
 </html>
