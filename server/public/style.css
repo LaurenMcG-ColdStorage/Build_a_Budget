@@ -13,3 +13,9 @@ h1{
     background-color: burlywood;
     text-align: center;
 }
+.addEmployee{
+    text-align: center;
+}
+#tableElement{
+    background-color: antiquewhite;
+}

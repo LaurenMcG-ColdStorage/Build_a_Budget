@@ -18,7 +18,7 @@ function buildTable(){
     empTable.innerHTML = ''                   //Clears the existing table
     for (let employee of employeeData){       //Loops through employeeData
         empTable.innerHTML +=
-        `<tr>
+        `<tr id='tableElement'>
             <td>${employee.firstName}</td>
             <td>${employee.lastName}</td>
             <td>${employee.employeeID}</td>
