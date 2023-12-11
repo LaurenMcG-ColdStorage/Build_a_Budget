@@ -12,13 +12,11 @@ function handleSubmit(event){  //Create submission handler
     console.log(employeeData);  //Validate ingested data
     buildTable()
     salaryCalc()
-    const form = document.querySelector('.addEmployee'); //Collect form location
-    form.reset();  //Clears the form
-
 };
 
 function buildTable(){
     const empTable = document.querySelector('#empData'); //Finds table to add data
+    let index = 0;
     empTable.innerHTML = ''                   //Clears the existing table
     for (let employee of employeeData){       //Loops through employeeData
         empTable.innerHTML +=
@@ -28,19 +26,23 @@ function buildTable(){
             <td>${employee.employeeID}</td>
             <td>${employee.jobTitle}</td>
             <td>${employee.salary}</td>
-            <td><button id='deleteButton' onclick='removeMe(event)'>Remove</button></td>
+            <td><button id='deleteButton' onclick="removeMe(${index})">Remove</button></td>
         </tr>`
+        index++;
     };
-}
+    const form = document.querySelector('.addEmployee'); //Collect form location
+    form.reset();  //Clears the form
+};
 
-function removeMe(event){      //Creats delete button functionality for rows
-    event.target.parentElement.parentElement.remove();
-    salaryCalc()
+function removeMe(index){      //Creates delete button functionality for rows
+    employeeData.splice(index, 1);
+    buildTable();
+    salaryCalc();
 };
 
 function salaryCalc(){          //Creates salary calculator
     const budget = document.querySelector('.salaryBudget');
-    const warning = document.querySelector('#newEmployeeForm');
+    const warning = document.querySelector('.warning');
     let monthlySal = 0;
     let maxSal = 20000;
     for (let employee of employeeData){
@@ -48,9 +50,10 @@ function salaryCalc(){          //Creates salary calculator
     };
     if(monthlySal < maxSal){
         budget.innerHTML = `<p>Total Monthly Budget: ${monthlySal}</p>`
+        warning.innerHTML = `<div class='warning'></div>`
     } else {
         budget.innerHTML = `<p>Total Monthly Budget: ${monthlySal}</p>`
-        warning.innerHTML += `<h3 class='warning'>Salary Over Budget!</h3>`
+        warning.innerHTML = `<div class='warning'><p>Salary Over Budget!</p></div>`
     };
     
 
