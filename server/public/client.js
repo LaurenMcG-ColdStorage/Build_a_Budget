@@ -49,11 +49,11 @@ function salaryCalc(){          //Creates salary calculator
         monthlySal += Math.round(employee.salary/12);
     };
     if(monthlySal < maxSal){
-        budget.innerHTML = `<p>Total Monthly Budget: ${monthlySal}</p>`
-        warning.innerHTML = `<div class='warning'></div>`
+        budget.innerHTML = `<p class='over-budget'>Total Monthly Budget: ${monthlySal}</p>`
+        warning.innerHTML = `<div class='over-budget'></div>`
     } else {
-        budget.innerHTML = `<p>Total Monthly Budget: ${monthlySal}</p>`
-        warning.innerHTML = `<div class='warning'><p>Salary Over Budget!</p></div>`
+        budget.innerHTML = `<p class='over-budget'>Total Monthly Budget: ${monthlySal}</p>`
+        warning.innerHTML = `<div class='over-budget''><p>Salary Over Budget!</p></div>`
     };
     
 

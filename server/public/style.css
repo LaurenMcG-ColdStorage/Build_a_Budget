@@ -21,9 +21,12 @@ h1{
 #tableElement{
     background-color: antiquewhite;
 }
-.warning{
+.over-budget{
     background-color: antiquewhite;
     color:darkred;
     text-align: center;
     text-shadow: 2px 2px 2px grey;
+}
+.salaryBudget{
+    text-align: center;
 }
