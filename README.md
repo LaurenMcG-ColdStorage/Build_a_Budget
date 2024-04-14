@@ -19,13 +19,13 @@ This data is entered via a web form and stored within an array of employee recor
 - Table of existing employees
 - Monthly salary budget
 
-Our Table is solved by utilizing a modular function. We first clear the table entirely every time the function is run. Then we append HTML to the DOM by looping through the employee array.
+Our Table is solved by utilizing a modular function. We first clear the table entirely every time the function is run. Then we render data in the DOM by looping through the employee array.
 
 Our salary budget is calculated every time the table is generated. This is done by looping through the employee array, pulling salary information, converting it to a monthly value, and then adding it to a total which we have named monthlySal.
 
 Once we have the total of salaries, we compare it to our maximum budget. This changes the styling in our footer, and even adds a line within our body to clearly show that we are over budget.
 
-Finally, the employee rows have been given a button that allows for removal from the array, table, and salary calculation.
+Finally, the employee rows have been given a button that allows for removal. This will reflect in the array, table, and salary calculation.
 
 Everything on our form was functional without styling, but in the spirit of making a proper web application I've added styling to make it more pleasant to look at.
 
@@ -43,9 +43,3 @@ On form submission:
 Styling is added when budget exceeds maximum, to clearly denote overage.
 
 Each employee row contains a remove button that deletes the employee from the table. This also recalculates the budget.
-
-
-
-Your project description goes here. What problem did you solve? How did you solve it?
-
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
